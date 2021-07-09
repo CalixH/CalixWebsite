@@ -1,0 +1,628 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>VSCO Collage</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.highlight-default {
+}
+.highlight-gray {
+	color: rgb(155,154,151);
+}
+.highlight-brown {
+	color: rgb(100,71,58);
+}
+.highlight-orange {
+	color: rgb(217,115,13);
+}
+.highlight-yellow {
+	color: rgb(223,171,1);
+}
+.highlight-teal {
+	color: rgb(15,123,108);
+}
+.highlight-blue {
+	color: rgb(11,110,153);
+}
+.highlight-purple {
+	color: rgb(105,64,165);
+}
+.highlight-pink {
+	color: rgb(173,26,114);
+}
+.highlight-red {
+	color: rgb(224,62,62);
+}
+.highlight-gray_background {
+	background: rgb(235,236,237);
+}
+.highlight-brown_background {
+	background: rgb(233,229,227);
+}
+.highlight-orange_background {
+	background: rgb(250,235,221);
+}
+.highlight-yellow_background {
+	background: rgb(251,243,219);
+}
+.highlight-teal_background {
+	background: rgb(221,237,234);
+}
+.highlight-blue_background {
+	background: rgb(221,235,241);
+}
+.highlight-purple_background {
+	background: rgb(234,228,242);
+}
+.highlight-pink_background {
+	background: rgb(244,223,235);
+}
+.highlight-red_background {
+	background: rgb(251,228,228);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(55, 53, 47, 0.6);
+	fill: rgba(55, 53, 47, 0.6);
+}
+.block-color-brown {
+	color: rgb(100,71,58);
+	fill: rgb(100,71,58);
+}
+.block-color-orange {
+	color: rgb(217,115,13);
+	fill: rgb(217,115,13);
+}
+.block-color-yellow {
+	color: rgb(223,171,1);
+	fill: rgb(223,171,1);
+}
+.block-color-teal {
+	color: rgb(15,123,108);
+	fill: rgb(15,123,108);
+}
+.block-color-blue {
+	color: rgb(11,110,153);
+	fill: rgb(11,110,153);
+}
+.block-color-purple {
+	color: rgb(105,64,165);
+	fill: rgb(105,64,165);
+}
+.block-color-pink {
+	color: rgb(173,26,114);
+	fill: rgb(173,26,114);
+}
+.block-color-red {
+	color: rgb(224,62,62);
+	fill: rgb(224,62,62);
+}
+.block-color-gray_background {
+	background: rgb(235,236,237);
+}
+.block-color-brown_background {
+	background: rgb(233,229,227);
+}
+.block-color-orange_background {
+	background: rgb(250,235,221);
+}
+.block-color-yellow_background {
+	background: rgb(251,243,219);
+}
+.block-color-teal_background {
+	background: rgb(221,237,234);
+}
+.block-color-blue_background {
+	background: rgb(221,235,241);
+}
+.block-color-purple_background {
+	background: rgb(234,228,242);
+}
+.block-color-pink_background {
+	background: rgb(244,223,235);
+}
+.block-color-red_background {
+	background: rgb(251,228,228);
+}
+.select-value-color-default { background-color: rgba(206,205,202,0.5); }
+.select-value-color-gray { background-color: rgba(155,154,151, 0.4); }
+.select-value-color-brown { background-color: rgba(140,46,0,0.2); }
+.select-value-color-orange { background-color: rgba(245,93,0,0.2); }
+.select-value-color-yellow { background-color: rgba(233,168,0,0.2); }
+.select-value-color-green { background-color: rgba(0,135,107,0.2); }
+.select-value-color-blue { background-color: rgba(0,120,223,0.2); }
+.select-value-color-purple { background-color: rgba(103,36,222,0.2); }
+.select-value-color-pink { background-color: rgba(221,0,129,0.2); }
+.select-value-color-red { background-color: rgba(255,0,26,0.2); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="aead82d3-ff2c-48ca-a8d9-3f8df44ac97d" class="page sans"><header><h1 class="page-title">VSCO Collage</h1></header><div class="page-body"><ul id="62302ea3-4030-4bf0-a176-1180fcbf534f" class="toggle"><li><details open=""><summary>Meets I really enjoyed that aren&#x27;t pictured: </summary><p id="f55708b4-8542-4e2f-85ea-007cd84ebf62" class="">Hangout#2 with Brenda&amp;Aadil tho that was my fave. Picnic+rugby</p><p id="d3ad7f23-bee9-4a3a-bc86-772c12d92865" class="">Frisbee with Luke, Aadil, Arthur, Edward. Very hot day, but the boys made it really fun. Lots of activity and good convos</p></details></li></ul><div id="499b41b0-cc65-43a7-a930-a5f952f1488c" class="column-list"><div id="01ea554e-2208-4778-b2a8-1e9e98451cb2" style="width:33.333333333333336%" class="column"><figure id="4fe7381c-203d-4979-8bd8-75ac8dec9bae" class="image"><a href="VSCO%20Collage%20aead82d3ff2c48caa8d93f8df44ac97d/Untitled.png"><img style="width:1179px" src="VSCO%20Collage%20aead82d3ff2c48caa8d93f8df44ac97d/Untitled.png"/></a></figure><p id="ac8c2bdc-05d7-494e-add1-b69e0eacd35b" class="">Calix, Joon, Arthur, Edward, [not pictured] Hannah - MOCA October 18 2018</p><hr id="73a9f1c3-a498-41f5-85af-f272aa436007"/><p id="320072ea-4af3-4df3-abbf-2a7e31a1b478" class="">MOCA was very cool, better with great people. Definitely one of the better museums because of the interactivities.</p><figure id="eec643f9-3dcc-4e8c-95d6-6f3799cef2e4" class="image"><a href="VSCO%20Collage%20aead82d3ff2c48caa8d93f8df44ac97d/Untitled%201.png"><img style="width:672px" src="VSCO%20Collage%20aead82d3ff2c48caa8d93f8df44ac97d/Untitled%201.png"/></a></figure><p id="0a964dbb-1cee-4622-969c-c6247712cba1" class="">Hannah, Edward, Aadil - BBQ May 30, 2021</p><hr id="1235f13e-073a-4d20-954c-047e10307a70"/><p id="3a7316b9-6d4d-4c17-85c7-9f4a1aee1ad8" class="">It was really fun BBQueueing for my friends, making some park hang vibez, and exploring Foody Mart in this ethnically ambiguous group. I genuinely enjoy this group of people</p><figure id="5e93b66d-4c71-4451-80fe-fb14ff5ecbf3" class="image"><a href="VSCO%20Collage%20aead82d3ff2c48caa8d93f8df44ac97d/Untitled%202.png"><img style="width:1080px" src="VSCO%20Collage%20aead82d3ff2c48caa8d93f8df44ac97d/Untitled%202.png"/></a></figure><p id="0217a9df-8661-4ff6-9035-541140b4a9d0" class="">Edward, Calix, Catherine, Emma, Hannah - Hannah&#x27;s Birthday? April 27, 2021</p><hr id="b43c9c35-7299-4e7e-bc3f-567f4da03b28"/><p id="9d664b7d-e498-40ee-a624-6098af5bc15a" class="">We hung out in Hannah&#x27;s backyard with nimo.</p><figure id="bbf067ba-e12d-4f3f-afb3-2e3ce96db452" class="image"><a href="VSCO%20Collage%20aead82d3ff2c48caa8d93f8df44ac97d/118890296_3578303332181277_3419528503576801127_n.jpg"><img style="width:288px" src="VSCO%20Collage%20aead82d3ff2c48caa8d93f8df44ac97d/118890296_3578303332181277_3419528503576801127_n.jpg"/></a></figure><p id="85260141-80b5-46f6-b782-abc75852dea0" class="">Edward - Camp Tamarack Sept 2019</p><hr id="0eb2f702-b57d-459a-b2ae-50cb3a825502"/><p id="e0562740-f0ea-4cae-a61d-701e9a7da75f" class="">ugh planning this was a lot of work but I think it turned out really well? some days there were hell and instead of participating we slept but it was so worth it.</p><figure id="e5bd8e22-233b-4e7b-b6b5-d49bde47606f" class="image"><a href="VSCO%20Collage%20aead82d3ff2c48caa8d93f8df44ac97d/148620571_336670250887181_3296662318267208408_n.jpg"><img style="width:4032px" src="VSCO%20Collage%20aead82d3ff2c48caa8d93f8df44ac97d/148620571_336670250887181_3296662318267208408_n.jpg"/></a></figure><p id="130488c7-5611-408e-91c6-114ee784676a" class="">Calix, Edward, Julia, William, Joon - Arts Banquet June 2019</p><hr id="090029bb-f439-4660-b858-d5549a89acd0"/><p id="2e2704d6-c655-445c-a1c3-95b76b1d7768" class="">Wow, all the arts banquets have been really fun but this took the ball. Is that the saying? Like dancing was so fun, and being at that age where you know everyone in every grade, food was great, becoming an exec and setting up was so fun. TONY WEARING THAT BANANA SUIT HAHA. </p><figure id="03b9863b-bf26-46ce-bad1-e9f4c972d454" class="image"><a href="VSCO%20Collage%20aead82d3ff2c48caa8d93f8df44ac97d/148291266_857828105038175_6998874776608959499_n.jpg"><img style="width:3088px" src="VSCO%20Collage%20aead82d3ff2c48caa8d93f8df44ac97d/148291266_857828105038175_6998874776608959499_n.jpg"/></a></figure><p id="85473757-fa14-48e9-9373-207ed174d04e" class="">George, Calix - Blue Mountain July 2020</p><hr id="1863b527-35ab-4c20-ae93-e598e6fdb2a3"/><p id="b5a1688c-7c82-4447-bc58-9f4b41c793f6" class="">Blue Mountain in the summer! This was a pitstop on our way to Owen Sound, taking a vacation during covid because we need to escape home. Lots of fun on the forest coaster.</p><figure id="36aa9d91-f90e-4058-beff-c260bc6d921f" class="image"><a href="VSCO%20Collage%20aead82d3ff2c48caa8d93f8df44ac97d/147766053_530448491269625_4979045088490986240_n.jpg"><img style="width:4032px" src="VSCO%20Collage%20aead82d3ff2c48caa8d93f8df44ac97d/147766053_530448491269625_4979045088490986240_n.jpg"/></a></figure><p id="85dc05f1-5625-46f8-9a1c-d1dfaf4af3ba" class="">George, Calix - Owen Sound July 2020</p><hr id="740c9de8-3e0c-4515-8126-5539b614981e"/><p id="c9aa7b4c-4879-4170-b91b-31d0efbadfac" class="">Part of our covid getaway, we went to this stream/lake/falls thing. It was such a chill getaway, especially with just our family</p><figure id="e39b09ef-b1db-4276-a2c7-0c9bad160ab7" class="image"><a href="VSCO%20Collage%20aead82d3ff2c48caa8d93f8df44ac97d/148516235_775585703337255_2445131370647253188_n.jpg"><img style="width:3984px" src="VSCO%20Collage%20aead82d3ff2c48caa8d93f8df44ac97d/148516235_775585703337255_2445131370647253188_n.jpg"/></a></figure><p id="e9b3d174-ff54-4c5a-8394-6977aa48cfba" class="">Jacky, Aadil, Calix - Tamarack Sept 2018</p><hr id="89988059-038e-46d7-a73e-22ab949e8c72"/><p id="dc257b76-494e-431e-b565-e63ae297949a" class="">Ah grade 11 when we went as leaders for the first time. That was really cool, leading but still participating. Overal just having a really fun time away from home.</p></div><div id="c7690054-1589-40fe-97e2-1f996d7146eb" style="width:33.333333333333336%" class="column"><figure id="963e2074-3f66-41b4-9620-c1eb1fdce4a1" class="image"><a href="VSCO%20Collage%20aead82d3ff2c48caa8d93f8df44ac97d/MC_Execs.jpg"><img style="width:4032px" src="VSCO%20Collage%20aead82d3ff2c48caa8d93f8df44ac97d/MC_Execs.jpg"/></a></figure><p id="fb10ac6c-58ab-4214-9433-bc105f433c90" class="">Joy, Michelle, Carol, Calix, Edward, [not pictured] Julia - MC Execs September 2020</p><hr id="d0a7234c-6743-4a3c-be81-bbe45bfff2fd"/><p id="18f0d817-d61b-4bec-8f02-1f38717eecfc" class="">Yah!</p><figure id="d686d754-3aae-4e2a-bd75-6a0b73e159d4" class="image"><a href="VSCO%20Collage%20aead82d3ff2c48caa8d93f8df44ac97d/194580248_2874563132761948_504275458701693582_n.jpg"><img style="width:2048px" src="VSCO%20Collage%20aead82d3ff2c48caa8d93f8df44ac97d/194580248_2874563132761948_504275458701693582_n.jpg"/></a></figure><p id="8e543ae9-8842-4f0d-a702-525d5e688fcf" class="">Aadil, Edward, Brenda, Calix, Russell, [not pictured] Hannah - May 2021</p><hr id="fcd4e6f4-2406-43b6-a1de-2824f34874d3"/><p id="1e5b7191-72d7-4cfd-a944-6b6821c3f87f" class="">First time hanging out in a while, and first time with this group. We tried Hannah&#x27;s secret bubble tea place and got chiggen balls. I ALSO FED MY FRIENDS ALCOHOL. Yeah it was a very fun day. </p><figure id="7424190b-3590-44d3-b12d-3234c76f6b32" class="image"><a href="VSCO%20Collage%20aead82d3ff2c48caa8d93f8df44ac97d/Untitled%203.png"><img style="width:1280px" src="VSCO%20Collage%20aead82d3ff2c48caa8d93f8df44ac97d/Untitled%203.png"/></a></figure><p id="77b3813e-16d5-497d-ba6b-8c4bac69d4b0" class="">Ally, Russell - April 2021</p><hr id="fb4b01de-5571-4ad1-ba24-f86f612d68ea"/><p id="42616cbc-ca64-47a4-bca9-4667c93f4384" class="">I&#x27;m surprised this is the first Russell photo I have on here. He gets a little aggressiev some times but he&#x27;s the most active dog I&#x27;ve ever seen. Truly a blessing</p><figure id="34970cfa-531d-46fc-87a1-1beb77cd6630" class="image"><a href="VSCO%20Collage%20aead82d3ff2c48caa8d93f8df44ac97d/147367094_239494431057957_4579037843423149929_n.jpg"><img style="width:2208px" src="VSCO%20Collage%20aead82d3ff2c48caa8d93f8df44ac97d/147367094_239494431057957_4579037843423149929_n.jpg"/></a></figure><p id="6e09df40-798d-4fb6-b1a6-961a9a4489a9" class="">Hannah, Emma, Calix, Arisa - Terry Fox Run Oct 2018?</p><hr id="9aa0c3ef-8eb8-480c-98d5-eb8e15e37475"/><p id="d2fd2652-ecfe-4a7f-ae0b-13257e3265c8" class="">it was really fun walking with people! such a graet photo</p><figure id="c9a63eaf-7a2c-4850-9e74-99bd8af67b10" class="image"><a href="VSCO%20Collage%20aead82d3ff2c48caa8d93f8df44ac97d/147792374_163634692032972_8738131091213584840_n.jpg"><img style="width:4032px" src="VSCO%20Collage%20aead82d3ff2c48caa8d93f8df44ac97d/147792374_163634692032972_8738131091213584840_n.jpg"/></a></figure><p id="dcba266e-2271-4fcb-bf8e-58adb0c0c185" class="">George, Calix - Mount Tremblant Jan 2018?</p><hr id="942f0d7d-8a16-41e4-adf3-f63a6776e287"/><p id="a1d5fe48-d97d-41e7-8c1a-383509420223" class="">I think this was our first time snowboarding as non-noobs. It was great, my brother is still a noob but it was really fun. THE MOUNTAIN WAS HUGEE. also portrait mode photo nice. </p><figure id="b12f68c1-9fb6-4d96-8007-6ddc1d190ab4" class="image"><a href="VSCO%20Collage%20aead82d3ff2c48caa8d93f8df44ac97d/147756655_174076257825275_2285487303307075368_n.jpg"><img style="width:3024px" src="VSCO%20Collage%20aead82d3ff2c48caa8d93f8df44ac97d/147756655_174076257825275_2285487303307075368_n.jpg"/></a></figure><p id="ab290904-8031-47cc-9b62-ebc63bd05788" class="">[not pictured] Calix, Carol, Hannahlee, Henry, Jennifer - Cherry Island Aug 2020</p><hr id="ca067f2e-62f8-41af-9d34-5d80997c0781"/><p id="f324fd37-ebe8-49f6-8859-cac0d5ce5795" class="">BIKED TO EDGE OF TORONTO AND BACK SO TIRING but it was really fun hanging out with this new group of people. Good exercise. around 50km</p><figure id="eaf0b3d9-425f-45ac-b5b6-959432a0c3e8" class="image"><a href="VSCO%20Collage%20aead82d3ff2c48caa8d93f8df44ac97d/148250842_222718496227169_7605908854729027908_n.jpg"><img style="width:4032px" src="VSCO%20Collage%20aead82d3ff2c48caa8d93f8df44ac97d/148250842_222718496227169_7605908854729027908_n.jpg"/></a></figure><p id="d78b43f3-4596-4919-bc66-c50f68ef912d" class="">George, Calix - Los Angeles March 2018</p><hr id="5bb6f5e7-9b96-477b-8f5c-57006aa74a52"/><p id="0957b339-1d32-416c-8484-af4fc86ff2ac" class="">MAN I MISS LV AND LA 2 OF THE BEST CITIES VISITED HANDS DOWN. I mean obviously they&#x27;re well-known and well-developped cities, and it was really fun exploring. Walk of Fame was a little lame, Hollywood sign + observatory were pretty cool. Getting to see a family friend again was really nice, and they have 3 dogs now! OUR AIRBNB WAS SICK. LV was unparalleled. Yes it was windy, but Bellagio and seeing all these fancy buildings for the rich was really cool.</p></div><div id="8a51d3cb-3167-4b07-89f1-fcd2865ba2b1" style="width:33.33333333333333%" class="column"><figure id="af43e677-15eb-46a9-9a7b-8137b55788bd" class="image"><a href="VSCO%20Collage%20aead82d3ff2c48caa8d93f8df44ac97d/192734736_481601606230304_5697650155938983952_n.jpg"><img style="width:1536px" src="VSCO%20Collage%20aead82d3ff2c48caa8d93f8df44ac97d/192734736_481601606230304_5697650155938983952_n.jpg"/></a></figure><p id="a2e11e13-5edf-4702-950c-78e45de0d1c5" class="">Emma, Edward, Catherine, Calix - April 2021</p><hr id="eed566c8-208b-4897-be71-464748197ef2"/><p id="e254354f-a2be-49d5-877f-6df4fe07d84a" class="">We bike to vic park Sheppard, hungout at a wishing well woods with a kids park, and then biked to Hannah&#x27;s I think? Good weather</p><figure id="1685d02b-0729-4ebb-873b-3bace819162b" class="image"><a href="VSCO%20Collage%20aead82d3ff2c48caa8d93f8df44ac97d/Untitled%204.png"><img style="width:1536px" src="VSCO%20Collage%20aead82d3ff2c48caa8d93f8df44ac97d/Untitled%204.png"/></a></figure><p id="072177ce-5462-4c18-a230-8107a720ce2d" class="">[not pictured] Calix, Edward, Hannah - May 7 2021</p><hr id="ee504e47-8eaa-40a7-af7a-089d00fab391"/><p id="54af6160-fcf2-4dd2-948d-baa5394973ad" class="">This is the view after we got our first vaccine!</p><figure id="6cbca9b9-9b1d-4d0d-8c96-7e5345e6b817" class="image"><a href="VSCO%20Collage%20aead82d3ff2c48caa8d93f8df44ac97d/128810679_426700564996351_7007981395744533387_n.jpg"><img style="width:288px" src="VSCO%20Collage%20aead82d3ff2c48caa8d93f8df44ac97d/128810679_426700564996351_7007981395744533387_n.jpg"/></a></figure><p id="f8e1ccff-f943-4468-b10a-58ea349e5e73" class="">Calix, Edward, Joon, William - Commencement Barbershop June 2019</p><hr id="e06a10c2-666e-428a-a1b2-43635fe91db9"/><p id="5840cbf9-5b23-4bef-a740-11566b9a8e7c" class="">so fun!!! nervewracking but people loved us i think. I love these boys and rehearsing was so fun. so fun so fun. The best part is this image sums up our performance as well as all the memories before &lt;3</p><figure id="819c93c4-61a8-4571-8430-5327a4cbdc23" class="image"><a href="VSCO%20Collage%20aead82d3ff2c48caa8d93f8df44ac97d/148317649_123699879630040_3864169393205321847_n.jpg"><img style="width:1620px" src="VSCO%20Collage%20aead82d3ff2c48caa8d93f8df44ac97d/148317649_123699879630040_3864169393205321847_n.jpg"/></a></figure><p id="f7522d37-4c3c-47a2-9ac5-f2cf46bd0bec" class="">William, Calix, Joon, Edward - Arts Banquet June 2019</p><hr id="cb57a5d7-905d-44d5-8341-4c1a31be91c8"/><p id="e273918e-11cb-4ab5-b8c9-0b25111ecc28" class="">Ah, the horsemen. Yeah photos were great. The backdrop was so amazing this year, lighting was phenomenal.</p><figure id="8f9ef1e1-cb41-480d-82b2-836c3731d695" class="image"><a href="VSCO%20Collage%20aead82d3ff2c48caa8d93f8df44ac97d/109564046_1802315366601298_8320505848698597085_n.jpg"><img style="width:3024px" src="VSCO%20Collage%20aead82d3ff2c48caa8d93f8df44ac97d/109564046_1802315366601298_8320505848698597085_n.jpg"/></a></figure><p id="3af96d50-eca7-42a1-9535-9e9f3ef93dd7" class="">Whas! Joon, [not pictured] Calix, Edward, Erica, Hannah - Edward&#x27;s Garden July 2020</p><hr id="c9ddbea4-b4fa-4a1b-ac0d-6e304bb7dd14"/><p id="05412b28-eb07-4626-849e-fd9fe0b147df" class="">Finally a hangout with good friends during covid, this was really fun and then we walked to that plaza after. It was really hot but really good experience.</p><figure id="a25a0bda-4f38-4f93-9a64-cd27cae78b0f" class="image"><a href="VSCO%20Collage%20aead82d3ff2c48caa8d93f8df44ac97d/147698634_417425579511932_6843722598973977535_n.jpg"><img style="width:1280px" src="VSCO%20Collage%20aead82d3ff2c48caa8d93f8df44ac97d/147698634_417425579511932_6843722598973977535_n.jpg"/></a></figure><p id="b5ec7ac0-af13-4948-9b39-018fcad56e92" class="">Calix - Banff July 2017</p><hr id="73b0aef5-c4d1-4c84-b947-27505b7e5179"/><p id="972ca98d-172a-44cf-a185-753842d88d30" class="">I think this was Emerald Lake. Banff was beautiful, 100% recommend go for a chill sightseeing vacation</p></div></div></div></article></body></html>
