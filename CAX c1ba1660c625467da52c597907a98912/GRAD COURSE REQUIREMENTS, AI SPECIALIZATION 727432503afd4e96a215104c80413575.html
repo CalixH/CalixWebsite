@@ -1,0 +1,648 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>GRAD COURSE REQUIREMENTS, AI SPECIALIZATION</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.highlight-default {
+}
+.highlight-gray {
+	color: rgb(155,154,151);
+}
+.highlight-brown {
+	color: rgb(100,71,58);
+}
+.highlight-orange {
+	color: rgb(217,115,13);
+}
+.highlight-yellow {
+	color: rgb(223,171,1);
+}
+.highlight-teal {
+	color: rgb(15,123,108);
+}
+.highlight-blue {
+	color: rgb(11,110,153);
+}
+.highlight-purple {
+	color: rgb(105,64,165);
+}
+.highlight-pink {
+	color: rgb(173,26,114);
+}
+.highlight-red {
+	color: rgb(224,62,62);
+}
+.highlight-gray_background {
+	background: rgb(235,236,237);
+}
+.highlight-brown_background {
+	background: rgb(233,229,227);
+}
+.highlight-orange_background {
+	background: rgb(250,235,221);
+}
+.highlight-yellow_background {
+	background: rgb(251,243,219);
+}
+.highlight-teal_background {
+	background: rgb(221,237,234);
+}
+.highlight-blue_background {
+	background: rgb(221,235,241);
+}
+.highlight-purple_background {
+	background: rgb(234,228,242);
+}
+.highlight-pink_background {
+	background: rgb(244,223,235);
+}
+.highlight-red_background {
+	background: rgb(251,228,228);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(55, 53, 47, 0.6);
+	fill: rgba(55, 53, 47, 0.6);
+}
+.block-color-brown {
+	color: rgb(100,71,58);
+	fill: rgb(100,71,58);
+}
+.block-color-orange {
+	color: rgb(217,115,13);
+	fill: rgb(217,115,13);
+}
+.block-color-yellow {
+	color: rgb(223,171,1);
+	fill: rgb(223,171,1);
+}
+.block-color-teal {
+	color: rgb(15,123,108);
+	fill: rgb(15,123,108);
+}
+.block-color-blue {
+	color: rgb(11,110,153);
+	fill: rgb(11,110,153);
+}
+.block-color-purple {
+	color: rgb(105,64,165);
+	fill: rgb(105,64,165);
+}
+.block-color-pink {
+	color: rgb(173,26,114);
+	fill: rgb(173,26,114);
+}
+.block-color-red {
+	color: rgb(224,62,62);
+	fill: rgb(224,62,62);
+}
+.block-color-gray_background {
+	background: rgb(235,236,237);
+}
+.block-color-brown_background {
+	background: rgb(233,229,227);
+}
+.block-color-orange_background {
+	background: rgb(250,235,221);
+}
+.block-color-yellow_background {
+	background: rgb(251,243,219);
+}
+.block-color-teal_background {
+	background: rgb(221,237,234);
+}
+.block-color-blue_background {
+	background: rgb(221,235,241);
+}
+.block-color-purple_background {
+	background: rgb(234,228,242);
+}
+.block-color-pink_background {
+	background: rgb(244,223,235);
+}
+.block-color-red_background {
+	background: rgb(251,228,228);
+}
+.select-value-color-default { background-color: rgba(206,205,202,0.5); }
+.select-value-color-gray { background-color: rgba(155,154,151, 0.4); }
+.select-value-color-brown { background-color: rgba(140,46,0,0.2); }
+.select-value-color-orange { background-color: rgba(245,93,0,0.2); }
+.select-value-color-yellow { background-color: rgba(233,168,0,0.2); }
+.select-value-color-green { background-color: rgba(0,135,107,0.2); }
+.select-value-color-blue { background-color: rgba(0,120,223,0.2); }
+.select-value-color-purple { background-color: rgba(103,36,222,0.2); }
+.select-value-color-pink { background-color: rgba(221,0,129,0.2); }
+.select-value-color-red { background-color: rgba(255,0,26,0.2); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="72743250-3afd-4e96-a215-104c80413575" class="page sans"><header><img class="page-cover-image" src="https://www.notion.so/images/page-cover/met_william_morris_1875.jpg" style="object-position:center 0%"/><div class="page-header-icon page-header-icon-with-cover"><span class="icon">🤖</span></div><h1 class="page-title">GRAD COURSE REQUIREMENTS, AI SPECIALIZATION</h1></header><div class="page-body"><h1 id="cdf33e7c-77bd-4305-8e4c-80ea1ed0b5b2" class="block-color-blue_background">2020-2021 BCS + Artificial Intelligence Specialization</h1><ol id="ce566175-5c16-439d-a347-71880c6473d1" class="numbered-list" start="1"><li>Under Required Courses and Electives, check off the forty unique courses (20.0 units) that you have earned university credit for. Additional Elective Units can be any course for which you received university credit.</li></ol><ol id="327af23e-9b58-482f-92ce-3bfaf044b5f7" class="numbered-list" start="2"><li>Verify that the Required Courses and Electives also satisfy the Additional Constraints.</li></ol><div id="af87eeb9-0578-40b4-a1f7-8c822627bb06" class="column-list"><div id="daa474de-fce9-4e20-928d-37c113777d23" style="width:50%" class="column"><h2 id="9e369ff9-5926-494d-ab21-76931b51fad0" class="block-color-blue_background"><strong>Required Courses</strong></h2></div><div id="a5578ce6-23a6-48af-a283-671fbf7643cc" style="width:50%" class="column"><h2 id="63c10214-85e8-4a88-acf2-366e56fd1f63" class="block-color-blue_background"><strong>Electives</strong></h2></div></div><div id="c008e5a6-b2a3-45cd-b09a-292cacaf5958" class="column-list"><div id="894fc2c2-c210-4789-9385-6942c4029dba" style="width:28.125%" class="column"><ul id="9f0a9862-fa9d-4e97-a766-325163815aaf" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">7.5 CS Units</span><ul id="0ff91e76-c860-4b00-b4d2-522bd9938954" class="to-do-list"><li><div class="checkbox checkbox-on"></div> <span class="to-do-children-checked">CS 1[134]5</span></li></ul><ul id="c8e9d797-1b18-4c80-9d85-dc4ac2fa2273" class="to-do-list"><li><div class="checkbox checkbox-on"></div> <span class="to-do-children-checked">CS 1[34]6</span></li></ul><ul id="8f96a6a8-ba81-4819-9b4c-55ca34af1237" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">CS 240</span></li></ul><ul id="eb36628c-efa0-4820-866c-d428af3301e6" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">CS 241</span></li></ul><ul id="27cab660-2f57-4340-81f8-decae03b2413" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">CS 245</span></li></ul><ul id="ab60d26e-f1ea-47cb-9c7d-aeb29436a2d6" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">CS 246</span></li></ul><ul id="94c28bb2-f1a0-4b91-8d19-7acc247ce0d5" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">CS 251</span></li></ul><ul id="edde5aa9-2845-428f-93b4-def319ebd92d" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">CS 341</span></li></ul><ul id="5a734801-2e26-4261-b8f0-f56a2a9cc0e2" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">CS 350</span></li></ul><ul id="4f892af3-7d19-4601-9ce0-b23beeedfb06" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">CS 340-398; 440-489</span></li></ul><ul id="bee12f7b-7dad-448c-aef8-95dd2a4a0102" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">CS 340-398; 440-489</span></li></ul><ul id="1b09cc4f-881e-4efb-89f8-dc8bb7a9915d" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">CS 340-398; 440-489</span></li></ul><ul id="4e481c83-9ec9-4247-8c38-971f01d99948" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">CS 480 or CS 485</span></li></ul><ul id="86a8f7b4-cf7d-44a1-87a1-7271a4950a62" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">CS 486</span></li></ul><ul id="2c6bc7c9-6022-45f7-9f50-5352452f7b5a" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">CS 492</span></li></ul></li></ul></div><div id="c983842f-207d-4992-9d5a-5dc865b78bcb" style="width:21.875%" class="column"><ul id="f1efa0a9-216f-498d-9dee-d7a1033849aa" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked"> 3.5 Math Units</span><ul id="185ddbd3-b628-47a8-b059-ad4740776de5" class="to-do-list"><li><div class="checkbox checkbox-on"></div> <span class="to-do-children-checked">MATH 1[34]5</span></li></ul><ul id="134cdc7b-1d62-4ad5-9286-43517fd6b7a9" class="to-do-list"><li><div class="checkbox checkbox-on"></div> <span class="to-do-children-checked">MATH 1[34]6</span></li></ul><ul id="de7c8324-7f6b-4d44-b0ca-dc9f547c8437" class="to-do-list"><li><div class="checkbox checkbox-on"></div> <span class="to-do-children-checked">MATH 1[234]7</span></li></ul><ul id="508658f7-62c0-4eda-a331-dd8cf86d69cd" class="to-do-list"><li><div class="checkbox checkbox-on"></div> <span class="to-do-children-checked">MATH 1[234]8</span></li></ul><ul id="7d4a8021-13c4-4ccc-8d4e-d7b63abe142c" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">MATH 2[34]9</span></li></ul><ul id="44409cc1-a4ce-401d-9821-9c9f702e817c" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">STAT 2[34]0</span></li></ul><ul id="5614ae84-c6b6-4db3-a484-1f467e267f69" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">STAT 2[34]1</span></li></ul></li></ul></div><div id="7e889f9b-af5d-416c-888e-138f86ab0102" style="width:25%" class="column"><ul id="9a9e21e1-e7c7-4259-a5f5-4f634f608014" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked"> 5.0 Non-Math Elective Units</span><ul id="d2dbb121-50ac-4736-9b0b-428ef445c760" class="to-do-list"><li><div class="checkbox checkbox-on"></div> <span class="to-do-children-checked">Communication list I</span></li></ul><ul id="061eedfd-bc23-458e-99df-e881f3d9dca7" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">Communication list II</span></li></ul><ul id="8f754653-ec4b-4e3c-91a6-bb2dd304e0c9" class="to-do-list"><li><div class="checkbox checkbox-on"></div> <span class="to-do-children-checked"> econ 101</span></li></ul><ul id="360750de-9df8-4bb2-9663-4b89859519b0" class="to-do-list"><li><div class="checkbox checkbox-on"></div> <span class="to-do-children-checked">econ 201 </span></li></ul><ul id="ba4f21a2-3727-4300-833d-380c4ce33ec3" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked"> </span></li></ul><ul id="a8e172a1-6330-45f2-a3d0-db0093e2859e" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked"> </span></li></ul><ul id="df9e5f23-9246-46b2-b2be-ad3e5d64b206" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked"> </span></li></ul><ul id="346bb8a9-79bd-4840-940e-e781cb7d9296" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked"> </span></li></ul><ul id="ded59954-b5e1-4046-ada8-1f680c965a81" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked"> </span></li></ul><ul id="13f81d63-4e4c-4e70-af9b-097fa557af32" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked"> </span></li></ul></li></ul></div><div id="bd47dd72-4e71-4ebd-97b6-f1feeef0a2be" style="width:25%" class="column"><ul id="86065585-f02e-438c-b8ca-3c884cff3e17" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">4.0 Additional Elective Units</span><ul id="b086501b-b3c1-4b41-8162-cf890c606545" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked"> </span></li></ul><ul id="e4459dc7-01be-4048-87e3-4f8d7d570ab6" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked"> </span></li></ul><ul id="ef60138c-e1ca-4dce-974e-a869376fee5a" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked"> </span></li></ul><ul id="33fbb538-22b6-4685-981a-b14408812e78" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked"> </span></li></ul><ul id="c399fe2b-ca61-4cda-a0b8-c9481423917c" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked"> </span></li></ul><ul id="bb60626b-9797-4780-a63d-2056fd96541c" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked"> </span></li></ul><ul id="a46fd923-2121-4d93-8a84-181893161c6c" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked"> </span></li></ul><ul id="69623cc9-6f6b-47c3-9514-8882755891cf" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked"> </span></li></ul></li></ul></div></div><h2 id="2cba011e-d27f-4d3a-a6bb-207b41188794" class="block-color-blue_background"><strong>Additional Constraints</strong></h2><div id="74e9971b-47f3-4209-bf16-961816c39a1d" class="column-list"><div id="2a2f0253-40e4-42e5-b08d-0cf5fa67844d" style="width:25%" class="column"><ul id="1dead18f-d2ba-4085-86c9-7687d560f2d6" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">One of ECE 380 or SE 380</span></li></ul><ul id="fcdadc7d-7cee-4505-926e-611406260216" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">Three courses from List A</span><ul id="6c042300-ce31-4d7b-b9c8-453f9265315d" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked"> CO 367</span></li></ul><ul id="2bd4badc-d15f-4aa0-bb83-bd47e3c7bdd6" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">CO 456</span></li></ul><ul id="b1243cef-a8e5-4ac1-ad10-658eeaafe142" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">CO 463</span></li></ul><ul id="40aad894-bf7a-4a03-b46f-87324f2255f0" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">CO 466</span></li></ul><ul id="5af73de9-fc0e-4fe9-842a-6f5264352e0c" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">CS 452</span></li></ul><ul id="071e385a-5a99-4c69-b8a9-fcec2c29723b" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">CS 4805</span></li></ul><ul id="fd1cdc7b-30b2-4318-b92c-cc03a57f7ad4" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">CS 484</span></li></ul><ul id="1219e5a8-a45a-46b9-b488-f30f2d15c8db" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">CS 4855</span></li></ul><ul id="6f443733-37cd-48f5-99e3-b4a710a095e5" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">STAT 341</span></li></ul><ul id="6a0a5ab7-c8ae-4459-a81d-fdad68cea70d" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">STAT 440</span></li></ul><ul id="4e2b39c3-0de6-40f4-96c7-a4ef46db1fb4" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">STAT 441</span></li></ul><ul id="3bb6126b-0763-449b-8315-2a4b8dfb139a" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">STAT 444</span></li></ul><ul id="5021ffab-43dc-4f92-a5ef-91a549864365" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">ECE 423</span></li></ul><ul id="202d8a70-f9f2-4291-8362-16bf3e6f1fae" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">ECE 481</span></li></ul><ul id="12d36e1c-7047-4402-89d1-36fb5df1730b" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">ECE 486</span></li></ul><ul id="cb9c07b9-0243-4b1c-aae8-419734878052" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">ECE 488</span></li></ul><ul id="ab51a53c-88df-48b5-b938-6708d896c3f9" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">MSCI 446</span></li></ul><ul id="7ba02c9a-6d46-4c76-aeb8-521ed5540036" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">MTE 544</span></li></ul><ul id="ee63c8f2-973c-49f5-9edc-0d8d351cb701" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">SYDE 522</span></li></ul><ul id="a8baaa4e-316b-4865-90fb-dca7295fa45d" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">SYDE 556</span></li></ul><ul id="2a41324e-5c64-41e6-9674-d78a49b35d6d" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">SYDE 572</span></li></ul></li></ul></div><div id="1e330da1-9882-49b6-aeb8-8e2d8fa947a7" style="width:37.50000000000001%" class="column"><ul id="831f1807-cb29-45de-90e9-e8aa98a07b07" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked"> Non-math elective units must satisfy
+breadth and depth requirements:</span><ul id="26cae460-d862-4ddc-9442-d09194925155" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">All of (breadth):</span><ul id="42d68f62-05cc-438d-af5a-54730423dc9d" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">1.0 units from the humanities</span></li></ul><ul id="d5c26bad-7d4c-40a7-9976-cd9d5d025c15" class="to-do-list"><li><div class="checkbox checkbox-on"></div> <span class="to-do-children-checked">1.0 units from the social sciences</span></li></ul><ul id="3defd332-2462-423a-bf90-dd12a5d8a676" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">0.5 units from the pure sciences</span></li></ul><ul id="6beab672-e693-4c8b-b083-40a0eb91593f" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">0.5 units from the pure or applied
+sciences</span></li></ul></li></ul><ul id="8373b504-6e18-420e-920c-a46ae97774ce" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">One of (depth):</span><ul id="8580b45d-4825-4078-81ba-7c28a576e1ff" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">1.5 units in the same subject area
+with at least 0.5 units at the 3rd
+year level or higher, or</span></li></ul><ul id="e04f43c2-7842-4b48-b2e5-6abec5018ac7" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">1.5 units with the same subject
+forming a prerequisite chain of
+length three</span></li></ul></li></ul></li></ul></div><div id="54edaa70-5fb6-4358-8c8c-6ce173e3d0b9" style="width:37.500000000000014%" class="column"><ul id="972ceb59-afc8-41fc-a944-4b49009b5f5f" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">Seven (regular) or eight (co-op) terms
+enrolled in at least three courses
+totaling 1.5 units</span></li></ul><ul id="cc1eaa5f-7865-4ce6-913a-9144dd84a24f" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">No more than 2.0 units of failed
+courses</span></li></ul><ul id="3c4cfc3d-c485-4d8f-9764-611b9ab89510" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">No more than 5.0 units of unusable
+course attempts (failures and repeats
+of passed courses)</span></li></ul><ul id="68f0b5fc-712e-477e-9f66-64d710abd37f" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">CS major average of 60% or higher</span></li></ul><ul id="d07ab44b-a578-42c3-8436-897fe623c87a" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">Cumulative average of 60% or higher</span></li></ul><ul id="7eb1e6fe-dd06-428a-98f0-d7b8f8007256" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">Co-op requirements met, if
+applicable, including PD 1, PD 11, PD
+10, and a minimum of two other PD
+courses</span></li></ul></div></div><hr id="3fb994d1-bc3d-4d05-956a-5d15f64f83a7"/><div id="ec83eb49-bd63-48ad-9556-cd618fb716a9" class="column-list"><div id="f5e647ee-b966-4ce6-ae40-d75789753863" style="width:50%" class="column"><p id="9f12209e-bfaa-4ffc-b3bf-8ab315306189" class="">Communication List I: At least 60% in one of EMLS 101R, EMLS 102R, EMLS/ENGL129R, ENGL 109, SPCOM 100, SPCOM 223.</p><p id="2d2ed838-836c-4cf8-b7af-92837b1a4ce2" class="">Communication List II: One of EMLS 103R, EMLS 104R, EMLS 110R, ENGL 108B, ENGL108D, ENGL 119, ENGL 208B, ENGL 209, ENGL 210E, ENGL 210F, ENGL 378/MTHEL
+300, SPCOM 225, SPCOM 227, SPCOM 228, or an additional course from Communication List 1. </p><p id="da2566cd-126d-4dcc-aa2d-938769d6535d" class="">For ECE 380/SE 380, MATH 213 is an acceptable alternative for its noted prerequisite. Alternatively, ECE 380/SE 380 can be substituted with CS 480, CS 484, or CS 485. If this substitution is chosen, then the substituted CS course cannot be used
+towards the one of &#x27;three additional courses&#x27; from List A.</p><p id="c149ad43-95fc-4dc1-b7ce-28503d3b54ce" class="">At least one of the &#x27;three additional courses&#x27; must be from Math and at least one from Engineering. Special topics courses (e.g., CS 489) may sometimes be appropriate for this option; interested students should see CS advisor for confirmation. Please note that you must complete the appropriate prerequisites in
+order to take the engineering courses required for AI specialization. In some cases, you may be required to take more courses beyond what is noted on the checklist.
+Engineering courses listed here cannot be used towards non-math electives.</p></div><div id="8286c5cd-c7d3-4480-a4e5-d39c2890d219" style="width:50%" class="column"><p id="4d6af7da-3020-41ac-b483-87509ae0d49a" class="">One of CS 480 and CS 485 is required. If both courses are taken, then one of them would count as one of &#x27;three additional courses&#x27; from List A. However, please see the restriction noted for these courses in footnote #3.</p><p id="9a8761cc-932b-4d57-aac6-9abf8f01948a" class="">The below Communication courses from List II can be used to satisfy both the Communication List II requirement and 0.5 unit for the humanities (breadth) requirement. Communication List I courses do NOT satisfy the humanities (breadth) requirement.</p><ul id="36ad326a-83c1-41b0-a5c3-1506f8048d91" class="bulleted-list"><li>ENGL 108B, ENGL 108D, ENGL 119, ENGL 208B, ENGL 209, ENGL210E, ENGL 210F, ENGL 378/MTHEL 300, SPCOM 225, SPCOM227, SPCOM 228.</li></ul><p id="95a0d2c0-76b2-4823-9235-6ad9bf1602f5" class="">Disclaimer: This checklist is a handy tool, but it is not a substitute for the official degree regulations. If there is a question of interpretation or a discrepancy, the University Calendar always takes precedence:
+http://ugradcalendar.uwaterloo.ca/group/MATH-Computer-Science-1. You may complete the checklist and ask a CS advisor to review it, but the student is ultimately responsible for ensuring that they have met their degree requirements.</p><p id="4b4b9c51-badb-4d2f-b6df-f1700ef0823d" class="">
+</p></div></div></div></article></body></html>

@@ -1,0 +1,1000 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Cax Q&#x27;s</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.highlight-default {
+}
+.highlight-gray {
+	color: rgb(155,154,151);
+}
+.highlight-brown {
+	color: rgb(100,71,58);
+}
+.highlight-orange {
+	color: rgb(217,115,13);
+}
+.highlight-yellow {
+	color: rgb(223,171,1);
+}
+.highlight-teal {
+	color: rgb(15,123,108);
+}
+.highlight-blue {
+	color: rgb(11,110,153);
+}
+.highlight-purple {
+	color: rgb(105,64,165);
+}
+.highlight-pink {
+	color: rgb(173,26,114);
+}
+.highlight-red {
+	color: rgb(224,62,62);
+}
+.highlight-gray_background {
+	background: rgb(235,236,237);
+}
+.highlight-brown_background {
+	background: rgb(233,229,227);
+}
+.highlight-orange_background {
+	background: rgb(250,235,221);
+}
+.highlight-yellow_background {
+	background: rgb(251,243,219);
+}
+.highlight-teal_background {
+	background: rgb(221,237,234);
+}
+.highlight-blue_background {
+	background: rgb(221,235,241);
+}
+.highlight-purple_background {
+	background: rgb(234,228,242);
+}
+.highlight-pink_background {
+	background: rgb(244,223,235);
+}
+.highlight-red_background {
+	background: rgb(251,228,228);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(55, 53, 47, 0.6);
+	fill: rgba(55, 53, 47, 0.6);
+}
+.block-color-brown {
+	color: rgb(100,71,58);
+	fill: rgb(100,71,58);
+}
+.block-color-orange {
+	color: rgb(217,115,13);
+	fill: rgb(217,115,13);
+}
+.block-color-yellow {
+	color: rgb(223,171,1);
+	fill: rgb(223,171,1);
+}
+.block-color-teal {
+	color: rgb(15,123,108);
+	fill: rgb(15,123,108);
+}
+.block-color-blue {
+	color: rgb(11,110,153);
+	fill: rgb(11,110,153);
+}
+.block-color-purple {
+	color: rgb(105,64,165);
+	fill: rgb(105,64,165);
+}
+.block-color-pink {
+	color: rgb(173,26,114);
+	fill: rgb(173,26,114);
+}
+.block-color-red {
+	color: rgb(224,62,62);
+	fill: rgb(224,62,62);
+}
+.block-color-gray_background {
+	background: rgb(235,236,237);
+}
+.block-color-brown_background {
+	background: rgb(233,229,227);
+}
+.block-color-orange_background {
+	background: rgb(250,235,221);
+}
+.block-color-yellow_background {
+	background: rgb(251,243,219);
+}
+.block-color-teal_background {
+	background: rgb(221,237,234);
+}
+.block-color-blue_background {
+	background: rgb(221,235,241);
+}
+.block-color-purple_background {
+	background: rgb(234,228,242);
+}
+.block-color-pink_background {
+	background: rgb(244,223,235);
+}
+.block-color-red_background {
+	background: rgb(251,228,228);
+}
+.select-value-color-default { background-color: rgba(206,205,202,0.5); }
+.select-value-color-gray { background-color: rgba(155,154,151, 0.4); }
+.select-value-color-brown { background-color: rgba(140,46,0,0.2); }
+.select-value-color-orange { background-color: rgba(245,93,0,0.2); }
+.select-value-color-yellow { background-color: rgba(233,168,0,0.2); }
+.select-value-color-green { background-color: rgba(0,135,107,0.2); }
+.select-value-color-blue { background-color: rgba(0,120,223,0.2); }
+.select-value-color-purple { background-color: rgba(103,36,222,0.2); }
+.select-value-color-pink { background-color: rgba(221,0,129,0.2); }
+.select-value-color-red { background-color: rgba(255,0,26,0.2); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="5de649a2-6d07-4b73-86c4-60876fb239c0" class="page sans"><header><div class="page-header-icon undefined"><span class="icon">❓</span></div><h1 class="page-title">Cax Q&#x27;s</h1><table class="properties"><tbody><tr class="property-row property-row-created_time"><th><span class="icon property-icon"><svg viewBox="0 0 14 14" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.4);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesCreatedAt"><path d="M6.98643729,14.0000972 C5.19579566,14.0000972 3.40419152,13.3106896 2.04245843,11.9323606 C-0.681017475,9.21200555 -0.680780251,4.76029539 2.04293482,2.04012507 C4.76664406,-0.68004331 9.22427509,-0.68004331 11.9480135,2.04013479 C13.272481,3.36277455 14,5.1330091 14,6.99552762 C14,8.87640182 13.2721894,10.6285043 11.9480135,11.9509302 C10.5679344,13.3105924 8.77756503,14.0000972 6.98643729,14.0000972 Z M10.2705296,7.00913883 L10.2705296,8.46099754 L10.2705296,8.65543362 L10.076181,8.65543362 L8.6543739,8.65543362 L5.72059514,8.65543362 L5.52619796,8.65543362 L5.52619796,8.46099754 L5.52619796,5.52541044 L5.52619796,3.37946773 L5.52619796,3.18502193 L5.72059514,3.18502193 L7.17253164,3.18502193 L7.36692883,3.18502193 L7.36692883,3.37946773 L7.36692883,6.81467358 L10.076181,6.81467358 L10.2705296,6.81467358 L10.2705296,7.00913883 Z M12.1601539,6.99552762 C12.1601539,5.61697497 11.6190112,4.32597154 10.6393933,3.34769528 C8.63253764,1.34336744 5.35197452,1.34061603 3.34153136,3.33944106 C3.33868273,3.34219247 3.33607716,3.34494388 3.33322852,3.34769528 C1.32397148,5.35459953 1.32372842,8.63641682 3.33322852,10.6433794 C5.34295224,12.6504489 8.62968901,12.6504489 10.6393933,10.6433794 C11.6190112,9.66506426 12.1601539,8.37408027 12.1601539,6.99552762 Z"></path></svg></span>Created</th><td><time>@February 8, 2021 1:07 AM</time></td></tr><tr class="property-row property-row-multi_select"><th><span class="icon property-icon"><svg viewBox="0 0 14 14" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.4);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesMultipleSelect"><path d="M4,3 C4,2.447715 4.447715,2 5,2 L12,2 C12.5523,2 13,2.447716 13,3 C13,3.55228 12.5523,4 12,4 L5,4 C4.447715,4 4,3.55228 4,3 Z M4,7 C4,6.447715 4.447715,6 5,6 L12,6 C12.5523,6 13,6.447716 13,7 C13,7.55228 12.5523,8 12,8 L5,8 C4.447715,8 4,7.55228 4,7 Z M4,11 C4,10.447715 4.447715,10 5,10 L12,10 C12.5523,10 13,10.447716 13,11 C13,11.55228 12.5523,12 12,12 L5,12 C4.447715,12 4,11.55228 4,11 Z M2,4 C1.44771525,4 1,3.55228475 1,3 C1,2.44771525 1.44771525,2 2,2 C2.55228475,2 3,2.44771525 3,3 C3,3.55228475 2.55228475,4 2,4 Z M2,8 C1.44771525,8 1,7.55228475 1,7 C1,6.44771525 1.44771525,6 2,6 C2.55228475,6 3,6.44771525 3,7 C3,7.55228475 2.55228475,8 2,8 Z M2,12 C1.44771525,12 1,11.5522847 1,11 C1,10.4477153 1.44771525,10 2,10 C2.55228475,10 3,10.4477153 3,11 C3,11.5522847 2.55228475,12 2,12 Z"></path></svg></span>Tags</th><td><span class="selected-value select-value-color-red">inspiration</span><span class="selected-value select-value-color-blue">personal project</span></td></tr><tr class="property-row property-row-text"><th><span class="icon property-icon"><svg viewBox="0 0 14 14" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.4);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesText"><path d="M7,4.56818 C7,4.29204 6.77614,4.06818 6.5,4.06818 L0.5,4.06818 C0.223858,4.06818 0,4.29204 0,4.56818 L0,5.61364 C0,5.88978 0.223858,6.11364 0.5,6.11364 L6.5,6.11364 C6.77614,6.11364 7,5.88978 7,5.61364 L7,4.56818 Z M0.5,1 C0.223858,1 0,1.223858 0,1.5 L0,2.54545 C0,2.8216 0.223858,3.04545 0.5,3.04545 L12.5,3.04545 C12.7761,3.04545 13,2.8216 13,2.54545 L13,1.5 C13,1.223858 12.7761,1 12.5,1 L0.5,1 Z M0,8.68182 C0,8.95796 0.223858,9.18182 0.5,9.18182 L11.5,9.18182 C11.7761,9.18182 12,8.95796 12,8.68182 L12,7.63636 C12,7.36022 11.7761,7.13636 11.5,7.13636 L0.5,7.13636 C0.223858,7.13636 0,7.36022 0,7.63636 L0,8.68182 Z M0,11.75 C0,12.0261 0.223858,12.25 0.5,12.25 L9.5,12.25 C9.77614,12.25 10,12.0261 10,11.75 L10,10.70455 C10,10.4284 9.77614,10.20455 9.5,10.20455 L0.5,10.20455 C0.223858,10.20455 0,10.4284 0,10.70455 L0,11.75 Z"></path></svg></span>stupid</th><td></td></tr></tbody></table></header><div class="page-body"><p id="d73a8d61-60cf-4380-8a9f-76ca3c6d18d6" class="">Spend a few minutes out of your day to answer a question. </p><ol id="17bb3bba-a6c3-4d26-a27b-b3781f740bdc" class="numbered-list" start="1"><li>When was the last time you tried something new?</li></ol><blockquote id="a45aae97-3fbb-4e2c-b9f4-bd85d85362aa" class="">uh stonks, working out in jan, </blockquote><p id="6a0f65e4-aeae-44df-b11a-946935e2c73a" class="">
+</p><ol id="2bbbeafb-6a58-4971-a5a2-25d08cdb21fe" class="numbered-list" start="1"><li>Who do you sometimes compare yourself to?</li></ol><blockquote id="80d5440e-1745-4098-9374-034571fb8af0" class="">No ones going to read this so I can be honest. Theres a guy in my neighbourhood called Alex. He&#x27;s my definition of success when it comes to fitness, extroversion, and social responsibility. He&#x27;s a fit kid, super kind and responsible. I compare myself to Aadil and Jim as well, they&#x27;re in very similar academic/career paths as me, and seeing how far behind I am kind of hurts.</blockquote><p id="2ff6d0cd-8f7f-40c4-b1e3-1ddba629c3f5" class="">
+</p><p id="3a634871-adc8-4860-bf84-2bd00549a360" class="">3. What’s the most sensible thing you’ve ever heard someone say?</p><blockquote id="76cbe472-4af3-485a-add5-2f3f0521dede" class="">theres been a few good example throughout the years but i dont remember them. One happened today. Someone said uh &quot;many people will argue when it&#x27;s clear they don&#x27;t know shit about both sides&quot;. I thought this was really smart bc its like to form a debate, you can&#x27;t just reinfornce your side and call the other side stupid; you have to understand both.</blockquote><p id="1b037238-0931-4525-bb95-936db696b045" class="">
+4. What gets you excited about life?</p><blockquote id="e9caf837-1c95-4e3a-aeec-e1689c888cce" class="">i, I really don&#x27;t know. I feel like small random things. Like thinking about playing league with y&#x27;all, sometimes looking outside and seeing the snow, idk.</blockquote><p id="ae118b0c-e679-4277-a29e-82a874a7374f" class="">
+5. What life lesson did you learn the hard way?</p><blockquote id="1e684e03-f52c-40d0-b226-1be30e2a8626" class="">if you don&#x27;t push yourself, you&#x27;ll be shoved and or trampled.</blockquote><p id="ac675efd-ff6d-48f9-b6c4-0125d00bd062" class="">
+6. What do you wish you spent more time doing five years ago?</p><blockquote id="7f893ae9-7667-4607-8c5d-e86169b26172" class="">going out and having fun honestly. Now that we&#x27;re alls tuck at home, it&#x27;s hard to find time to go out. I should&#x27;ve been mroe adventurous and go out with people to places. Tried out things like DECA and swim because now I won&#x27;t get that chance again</blockquote><p id="a29503cc-c5cb-4145-b957-1d008ad0dcbf" class="">
+7. Do you ask enough questions or do you settle for what you know?</p><blockquote id="255af33f-ca0d-4bf6-b890-1f63ede8755e" class="">I don&#x27;t ask enough questions because I&#x27;m afraid of coming of intrusive or jealous. As a consequence, I spend a lot of time overthinking. In reality, people love it when you ask questions, so just ask.</blockquote><p id="c0a51420-5fe2-4a69-97ed-70c6dc0abba9" class="">
+8. Who do you love and what are you doing about it?</p><blockquote id="a6ca1c6f-f3b8-496b-93f8-89578607cfd0" class="">I love fam and friends, but I think I&#x27;m trying to be too respectful and not interesting enough. I keep taking and taking, I laugh, but I need to give.</blockquote><p id="26e0f1fd-57d3-4650-ab40-f58116d360d1" class="">
+9. What’s a belief that you hold with which many people disagree?</p><blockquote id="91779aaa-1598-4ada-baa2-77a367b1736d" class="">you have to contribute to be worthwhile</blockquote><p id="869e73cd-454a-4f07-9559-7186318ed657" class="">
+10. What can you do today that you were not capable of a year ago?</p><blockquote id="481c28da-c180-4c22-909c-7e6ca773860a" class="">working without being pushed by deadlines</blockquote><p id="20486154-f686-4044-aacd-598380a6e440" class="">
+11. Do you think crying is a sign of weakness or strength?</p><blockquote id="7bf8434b-0582-4f04-b722-6e9ef8836228" class="">weakness, but I think it&#x27;s more a sign of humanity and empathy, which is better than insensitivity</blockquote><p id="1e5eb4fa-be4f-49d0-b49d-fcbc08cb6cd6" class="">
+12. What would you do differently if you knew nobody would judge you?</p><blockquote id="0ace17ed-f79e-4917-a294-a4618d558443" class="">rant. belt. say the things and insecurities on my mind bc i want affirmation</blockquote><p id="024d269e-4692-4235-a6ba-6df543c67b6f" class="">
+13. Do you celebrate the things you do have?</p><blockquote id="1365a64c-88d3-461c-a54f-ee39cf190025" class="">not enough</blockquote><p id="27063e86-e6ff-436b-9ced-feb37519a2f8" class="">
+14. What is the difference between living and existing?</p><blockquote id="2fc23cdd-b5bd-4a83-8600-06e0a832828d" class="">kinda like the difference between observing and vibing? if u just exist, you don;t really have a purpose or a motive. Living is when ur vibing because u get to enjoy another day</blockquote><p id="171cfe16-922d-4792-8ac5-f0ce3344cfe3" class="">
+15. If not now, then when?</p><blockquote id="0b114908-ea59-47c2-9a25-36655b41fb30" class="">reading week</blockquote><p id="e95cd220-614e-4a4c-8f4c-6e1854e21c9a" class="">
+16. Have you done anything lately worth remembering?</p><blockquote id="b9e99aec-9ea9-48af-90f8-1ec6a32dde29" class="">i made some funny jokes but also starting this Notion maybe</blockquote><p id="d4c4edb1-4321-4a36-b6d9-3488353d25c2" class="">
+17. What does your joy look like today?</p><blockquote id="d0c48538-32e0-4d6b-912d-26433b7f01c6" class="">getting shit done today so I&#x27;d have to do less tmr</blockquote><p id="880fe602-43bf-4373-ad7f-36a1b8cd8e21" class="">
+18. Is it possible to lie without saying a word?</p><blockquote id="e011d47d-66c6-468f-bfef-b013ce444259" class="">yuhh plead the fifth honey, also ommission of info is a crime</blockquote><p id="ef0d89c0-c19c-4701-8367-7547b87bc3cc" class="">
+19. If you had a friend who spoke to you in the same way that you sometimes speak to yourself, how long would
+you allow this person to be your friend?</p><blockquote id="ecd56ffb-bab6-4c16-8101-ea6e78d29eae" class="">haha, they won&#x27;t be a close friend for sure. I&#x27;m currently trying to find a balance between offensive, boring, and interesting. AM strucka good balance, but copying him is like, you don&#x27;t need 2 of one person</blockquote><p id="6bedba2d-d63c-45fb-b1f2-f03f5bf22d31" class="">
+20. Which activities make you lose track of time?</p><blockquote id="8058865f-db2f-4835-8859-b29d5d719d6a" class="">strangely enough watching chess streams??</blockquote><p id="2a7ac515-e5b7-42f5-a4ec-0ec70a51d4c5" class="">
+21. If you had to teach something, what would you teach?</p><blockquote id="c43f76c6-be96-41dd-98c4-667ea899f7ff" class="">like what i want to teach or what I should teach because I&#x27;m good at it? I guess I would want to teach psychology, philosophy, something about how humans think</blockquote><p id="be5406b2-13dc-46aa-af95-be035d62368b" class="">
+22. What would you regret not fully doing, being or having in your life?</p><blockquote id="27e31874-3856-454c-9b3d-0f130644bec4" class="">satisfaction. The feeling of hey, we&#x27;re doing great, everything is ok. I&#x27;ll do my best to achieve that</blockquote><p id="4bef35c4-1165-45a0-933a-ca1cfd0290f7" class="">
+23. Are you holding onto something that you need to let go of?</p><blockquote id="03894ff6-fe3c-45ba-afae-d254d73b3652" class="">i feel like most peoples answer to this is yes, but idk what</blockquote><p id="93feefb0-8d3b-4ff6-a00e-5345226d5435" class="">
+24. When you are 80-years-old, what will matter to you the most?</p><blockquote id="b1dc1d7c-1d17-4768-8952-b69ba1eeaac0" class="">probably what my grandkids think of me. I wanna be cool and rad but also be that grandparent that bakes and is artistic. doing 1000 piece puzzles lmao</blockquote><p id="86ddb126-d5f1-47f3-9f9b-d9c690dd86d3" class="">
+25. When is it time to stop calculating risk and rewards and just do what you know is right?</p><blockquote id="a25e78ab-c02b-44ce-a480-902de7891f65" class="">hahaha, now, but... I don&#x27;t want to be offensive or boring</blockquote><p id="4bb1b68c-67a3-4bff-870c-6df5d3724e30" class="">
+26. How old would you be if you didn’t know how old you are?</p><blockquote id="b5db2c23-e31f-4f2a-acdb-742e8f769dea" class="">wtf is this question. Like how old do I feel like I am? Honestly, an immature 30 yrsold past their prime</blockquote><p id="6c064580-3b93-4f75-81cd-48ffc92f441c" class="">
+27. Would you break the law to save a loved one?</p><blockquote id="554a663d-83a9-442d-8840-64b657c6c059" class="">if I really truly wholeheartedly loved them, then yes. If they commited a crime, then I don&#x27;t think I would wholeheartedly love them</blockquote><p id="8044954f-4dd9-4c6d-898f-21fd4715aba9" class="">
+28. What makes you smile?</p><blockquote id="f816e2ad-2a64-4f2d-ad72-9165cb442fe9" class=""> things funny and loud, cute, success</blockquote><p id="d67bc4df-ba9b-4cde-b769-68457209b84c" class="">
+29. When it’s all said and done, will you have said more than you’ve done?</p><blockquote id="ec367fa0-b4f1-48e8-b3a8-9f98d644bed2" class="">no</blockquote><p id="97c6e1a5-9dd3-4ece-8943-18d5c1ebfbe0" class="">
+30. If you had the opportunity to get a message across to a large group of people, what would your message be?</p><blockquote id="37f0fd27-782b-4590-badd-9c34cf08cd65" class="">live your life to your fullest. If society dictates that you must retweet, share, and repost the most trending articles, if you want to do it, go ahead. If you don&#x27;t, don&#x27;t.</blockquote><p id="1b2af0b1-a2c8-4ed6-8b18-77a6163dd7f3" class="">
+31. If the average human lifespan was 40 years, how would you live your life differently?
+32. What do we all have in common besides our genes that makes us human?</p><blockquote id="a65b2154-41ec-4f17-a412-128a8679bafe" class="">we want to be happy and make those we love happy</blockquote><p id="8e10c6ed-d7ea-4d66-8bcd-1972559e5af8" class="">
+33. If you could choose one book as a mandatory read for all high school students, which book would you
+choose?</p><blockquote id="eb806e7f-ec1c-41e2-ad34-e759243e4a30" class="">catcher in the rye was good, so was subtle art of not giving a fuck</blockquote><p id="9d6f37cc-85b1-4757-b3fc-9c84f530cd8a" class="">
+34. Would you rather have less work or more work you actually enjoy doing?</p><blockquote id="665317db-bdc4-472e-a1a2-18e3e3c6819b" class="">more enjoyed work. productivity + love is the ideal combo</blockquote><p id="bf20e361-7a20-4c71-9672-36f9493d9dbe" class="">
+35. What is important enough to go to war over?</p><blockquote id="ba44f7e8-8187-4488-9af4-ebcc501de252" class="">anyone capable of discussing important things can do so civilly without war</blockquote><p id="bd6ee1a0-c4e3-45dd-932e-bbc0e4554dfe" class="">
+36. Which is worse, failing or never trying?</p><blockquote id="256e4325-efd4-4734-9cfd-84b818328941" class="">never trying, you learn from failure, not from inexperience</blockquote><p id="18fabc69-6627-4f9e-9cfd-822a42bf700e" class="">
+37. When was the last time you listened to the sound of your own breathing?</p><blockquote id="1757dcff-a58a-4ddd-a3d1-86001935a9da" class="">today, it was weird. Why do you ask?</blockquote><p id="324ac8c4-9428-4d50-be68-f09d842926b9" class="">
+38. What’s something you know you do differently than most people?</p><blockquote id="810e5900-53f0-41c4-bd5e-9b0b8788767c" class="">how we think, I value opinions and perspectives over facts</blockquote><p id="5c2eb8f5-2539-4fa9-bb6c-aa23babdd40d" class="">
+39. What does ‘The American Dream’ mean to you?</p><blockquote id="68fd61ee-a4df-4c28-8c6a-c6978d0fd36d" class="">moderately large house. dog or 2. kid or 2. we&#x27;re in our mid-30s, still enjoy going to disneyworld. money nor status s an issue. we have family friend parties all the time. great office job.</blockquote><p id="d4b24e44-0469-4316-8307-113147d75e84" class="">
+40. Would you rather be a worried genius or a joyful simpleton?</p><blockquote id="dd89c54e-6857-4c64-be21-f8c3665296bc" class="">joyful simpleton. Look, there&#x27;s too much about the universe we don&#x27;t know, and in the span of my lifetime, there&#x27;s too much I&#x27;m not going to get to know. So why would I worry when I can just live in the time that is the now and just die when I&#x27;m satisfied?</blockquote><p id="0b1a73b8-90db-4ff0-930a-9714a415f7db" class="">
+41. If you could instill one piece of advice in a newborn baby’s mind, what advice would you give?</p><blockquote id="708ff639-8cd4-4928-af30-8337102e95b6" class="">think about how you act and how it affects others around you. Don&#x27;t be a bitch just because it makes you comfortable</blockquote><p id="a1b6a990-cbc4-4f26-93e1-58759177c451" class="">
+42. What is the most desirable trait another person can possess?</p><blockquote id="3d9a571c-8c58-415b-9195-3c9083cf3805" class="">charisma</blockquote><p id="f61d2ba2-e379-4ae8-b313-4af46683d354" class="">
+43. What are you most grateful for?</p><blockquote id="7a5b8f59-374f-4c10-9c18-d628861f37d6" class="">the knowledge to know what I want and how to get it</blockquote><p id="b57f228c-6ce2-481d-b40d-89b0d7757322" class="">
+44. Is stealing to feed a starving child wrong?</p><blockquote id="ed9e3340-4422-4801-906d-4cf0dc58bf69" class="">no</blockquote><p id="55df7b78-6a67-472e-bda4-9ba453002319" class="">
+45. What do you want most?</p><blockquote id="b7cc4b29-28de-423d-9322-a5d7339d5159" class="">to be successful. Successful socially, physically, in my career, and personally</blockquote><p id="caa0e329-a219-40a5-8b54-4be5523ef7c6" class="">
+46. Are you more worried about doing things right, or doing the right things?</p><blockquote id="01c7a874-1bdc-47f4-a0a5-4c5513c8c8c9" class="">doing things right. I trust myself to know what things are the right things to do</blockquote><p id="8358c6bc-c3cc-4e44-8372-b4116eb0f916" class="">
+47. What has life taught you recently?</p><blockquote id="6c2cab03-a56b-48f8-b796-c53e3e9c53e7" class=""> no one will pick up your slack for you, everything you want in your life is directly ahead of you, but you&#x27;re the only one that can reel it in</blockquote><p id="7ea77f0d-e791-4ecf-98ef-f90f696ceab3" class="">
+48. What is the one thing you would most like to change about the world?</p><blockquote id="a4f0beb6-3d5c-4998-8ad8-6e9813bc686b" class="">heteronormativity</blockquote><p id="ad17b9d1-ea46-4e4e-ba37-45011c80e393" class="">
+49. Where do you find inspiration?</p><blockquote id="d0d476f7-ef13-45bf-bb3b-f24f84fa6c63" class="">sudden bursts of understanding, when I break a task down into small manageable chunks</blockquote><p id="b0917b26-751b-4fca-b25a-837ef46936d8" class="">
+50. Can you describe your life in a six word sentence?</p><blockquote id="7b475090-85dd-4749-a598-5972b11db22e" class="">Calix Huang is an individual, completed with aspects from both majorities and minorities. </blockquote><p id="95c4b7f8-f2c8-4d87-a38e-d8df21041478" class="">
+51. If we learn from our mistakes, why are we always so afraid to make a mistake?
+52. What impact do you want to leave on the world?
+53. What is the most defining moment of your life thus far?
+54. In the haste of your daily life, what are you not seeing?
+55. If life is so short, why do we do so many things we don’t like and like so many things we don’t do?
+56. What lifts your spirits when life gets you down?
+57. Have you ever regretted something you did not say or do?
+58. Has your greatest fear ever come true?
+59. Why do we think of others the most when they’re gone?
+60. What is your most beloved childhood memory?
+61. Is it more important to love or be loved?
+62. If it all came back around to you, would it help you or hurt you?
+63. If you had the chance to go back in time and change one thing would you do it?
+64. If a doctor gave you five years to live, what would you try to accomplish?
+65. What is the difference between falling in love and being in love?
+66. Who do you think stands between you and happiness?
+67. What is the difference between innocence and ignorance?
+68. What is the simplest truth you can express in words?
+69. What gives your life meaning?
+70. Can there be happiness without sadness? Pleasure without pain? Peace without war?
+71. What’s the one thing you’d like others to remember about you at the end of your life?
+72. Is there such a thing as perfect?
+73. To what degree have you actually controlled the course your life has taken?
+74. What does it mean to be human?
+75. If you looked into the heart of your enemy, what do you think you would find that is different from what is in
+your own heart?
+76. What do you love most about yourself?
+77. Where would you most like to go and why?
+78. Is it more important to do what you love or to love what you are doing?
+79. What do you imagine yourself doing ten years from now?
+80. What small act of kindness were you once shown that you will never forget?
+81. What is your happiest childhood memory? What makes it so special?
+82. Do you own your things or do your things own you?
+83. Would you rather lose all of your old memories or never be able to make new ones?
+84. How do you deal with someone in a position of power who wants you to fail?
+85. What do you have that you cannot live without?
+86. When you close your eyes what do you see?
+87. What sustains you on a daily basis?
+88. What are your top five personal values?
+89. Why must you love someone enough to let them go?
+90. Do you ever celebrate the green lights?
+91. What personal prisons have you built out of fears?
+92. What one thing have you not done that you really want to do?
+93. Why are you, you?
+94. If you haven’t achieved it yet what do you have to lose?
+95. What three words would you use to describe the last three months of your life?
+96. Is it ever right to do the wrong thing? Is it ever wrong to do the right thing?
+97. How would you describe ‘freedom’ in your own words?
+98. What is the most important thing you could do right now in your personal life?
+99. If you could ask one person, alive or dead, only one question, who would you ask and what would you ask?
+100. If happiness was the national currency, what kind of work would make you rich?
+101. What is your number one goal for the next six months?
+102. Would you ever give up your life to save someone else?
+103. Are you happy with yourself?
+104. What is the meaning of ‘peace’ to you?
+105. What are three moral rules you will never break?
+106. What does it mean to allow another person to truly love you?
+107. Who or what do you think of when you think of love?
+108. If your life was a novel, what would be the title and how would your story end?
+109. What would you not give up for $1,000,000 in cash?
+110. When do you feel most like yourself?
+111. When you help someone do you ever think, “What’s in it for me?”
+112. What is your greatest challenge?
+113. How do you know when it’s time to continue holding on or time to let go?
+114. How do you define success?
+115. If someone could tell you the exact day and time you are going to die, would you want them to tell
+you?
+116. If I could grant you one wish what would you wish for?
+117. What have you read online recently that inspired you?
+118. Why do religions that advocate unity divide the human race?
+119. If you could live one day of your life over again, what day would you choose?
+120. What can money not buy?
+121. If you left this life tomorrow, how would you be remembered?
+122. Beyond the titles that others have given you, who are you?
+123. If you could live the next 24 hours and then erase it and start over just once, what would you do?
+124. Is it possible to know the truth without challenging it first?
+125. What word best describes the way you’ve spent the last month of your life?
+126. What makes everyone smile?
+127. What do you owe yourself?
+128. What would your ‘priceless’ MasterCard-style commercial be?
+129. Can you think of a time when impossible became possible?
+130. Why do you matter?
+131. How have you changed in the last five years?
+132. What are you sure of in your life?
+133. When you think of ‘home,’ what, specifically, do you think of?
+134. What’s the difference between settling for things and accepting the way things are?
+135. How many of your friends would you trust with your life?
+136. What’s your definition of heaven?
+137. What is your most prized possession?
+138. How would you describe yourself in one sentence?
+139. What stands between you and happiness?
+140. What makes a person beautiful?
+141. Is there ever a time when giving up makes sense?
+142. What makes you proud?
+143. How do you find the strength to do what you know in your heart is right?
+144. Where do you find peace?
+145. When have you worked hard and loved every minute of it?
+146. How short would your life have to be before you would start living differently today?
+147. Is it better to have loved and lost or to have never loved at all?
+148. What would you do if you made a mistake and somebody died?
+149. Who do you trust and why?
+150. If you were forced to eliminate every physical possession from your life with the exception of what
+could fit into a single backpack, what would you put in it?
+151. When does silence convey more meaning than words?
+152. How do you spend the majority of your free time?
+153. Who do you think of first when you think of ‘success?’
+154. What did you want to be when you grew up?
+155. How will today matter in five years from now?
+156. How have you helped someone else recently?
+157. What is your greatest skill?
+158. Do you see to believe or believe to see?
+159. How are you pursuing your dreams right now?
+160. What’s the next big step you need to take?
+161. If today was the last day of your life, would you want to do what you are about to do today?
+162. If today was the last day of your life, who would you call and what would you tell them?
+163. Who do you dream about?
+164. What do you have trouble seeing clearly in your mind?
+165. What are you looking forward to?
+166. What is the number one thing you want to accomplish before you die?
+167. When is love a weakness?
+168. What has been the most terrifying moment of your life thus far?
+169. Who is the strongest person you know?
+170. If you could take a single photograph of your life, what would it look like?
+171. Is the reward worth the risk?
+172. For you personally, what makes today worth living?
+173. What have you done in the last year that makes you proud?
+174. What did you learn recently that changed the way you live?
+175. What is your fondest memory from the past three years?
+176. What are the primary components of a happy life?
+177. How would the world be different if you were never born?
+178. What is your favorite song and why?
+179. With the resources you have right now, what can you do to bring yourself closer to your goal?
+180. What are your top three priorities?
+181. Why do we idolize sports players?
+182. What is the nicest thing someone has ever done for you?
+183. What do you see when you look into the future?
+184. What makes you angry? Why?
+185. What is the most valuable life lesson you learned from your parents?
+186. What does love feel like?
+187. What are your favorite simple pleasures?
+188. If you could go back in time and tell a younger version of yourself one thing, what would you tell?
+189. What do you do to deliberately impress others?
+190. What will you never do?
+191. Excluding romantic relationships, who do you love?
+192. What is your earliest childhood memory?
+193. What book has had the greatest influence on your life?
+194. What three questions do you wish you knew the answers to?
+195. What is the greatest peer pressure you’ve ever felt?
+196. What’s the biggest lie you once believed was true?
+197. In your lifetime, what have you done that hurt someone else?
+198. What’s the best part of growing older?
+199. What’s been on your mind most lately?
+200. What do you think is worth waiting for?
+201. What chances do you wish you had taken?
+202. Where else would you like to live? Why?
+203. What motivates you to go to work each day?
+204. What do you wish you had done differently?
+205. What is your greatest strength and your greatest weakness?
+206. When was the last time you lied? What did you lie about?
+207. What made you smile this week?
+208. What do you do with the majority of your money?
+209. What motivates you to be your best?
+210. When was the last time you lost your temper? About what?
+211. What will you never give up on?
+212. When you look into the past, what do you miss the most?
+213. How would you describe the past year of your life in one sentence?
+214. What is the most spontaneous thing you’ve ever done?
+215. What makes you uncomfortable?
+216. If you had to move 3000 miles away, what one thing would you miss the most?
+217. What worries you about the future?
+218. What one ‘need’ and one ‘want’ will you strive to achieve in the next twelve months?
+219. What life lessons did you have to experience firsthand before you fully understood them?
+220. Do you like the city or town you live in? Why or why not?
+221. What’s the best part of being you?
+222. When you look back over the past month, what single moment stands out?
+223. What do you do to relieve stress?
+224. What is your happiest memory?
+225. What is your saddest memory?
+226. What would you like to change?
+227. How many people do you love?
+228. What’s the best decision you’ve ever made?
+229. What’s your favorite true story that you enjoy sharing with others?
+230. Right now, at this moment, what do you want most?
+231. What are you waiting for? How are you writing your life’s story?
+232. What makes love last?
+233. What good comes from suffering?
+234. What’s the most important lesson you’ve learned in the last year?
+235. Based on you current daily actions and routines, where would you expect to be in five years?
+236. What was your last major accomplishment?
+237. Through all of life’s twists and turns who has been there for you?
+238. What or who has been distracting you?
+239. What are you looking forward to in the upcoming week?
+240. Who is your mentor and what have you learned from them?
+241. What are you uncertain about?
+242. What do you think about when you lie awake in bed?
+243. What’s something most people don’t know about you?
+244. When you have a random hour of free time, what do you usually do?
+245. What makes you weird?
+246. If you could relive yesterday what would you do differently?
+247. What do you do over and over again that you hate doing?
+248. Would you rather your child be less attractive and extremely intelligent or extremely attractive and
+less intelligent?
+249. What white lies do you often tell?
+250. What is the biggest change you have made in your life in the last year?
+251. What do you understand today about your life that you did not understand a year ago?
+252. Whose life have you had the greatest impact on?
+253. What did life teach you yesterday?
+254. Who impresses you?
+255. What have you done that you are not proud of?
+256. When should you reveal a secret that you promised you wouldn’t reveal?
+257. How would you spend your ideal day?
+258. What is the one primary quality you look for in a significant other?
+259. What do you admire most about your mother and father?
+260. What is the best advice you have ever received?
+261. If you could live forever, would you want to? Why?
+262. If you had to be someone else for one day, who would you be and why?
+263. What positive changes have you made in your life recently?
+264. Who makes you feel good about yourself?
+265. What is your biggest regret?
+266. Which one of your responsibilities do you wish you could get rid of?
+267. What’s something you don’t like to do that you are still really good at?
+268. What type of person angers you the most?
+269. What is missing in your life?
+270. What is your most striking physical attribute?
+271. What has fear of failure stopped you from doing?
+272. Who would you like to please the most?
+273. If you could go back in time and change things, what would you change about the week that just
+passed?
+274. When you meet someone for the very first time what do you want them to think about you?
+275. Who would you like to forgive?
+276. At what point during the last five years have you felt lost and alone?
+277. What is one opportunity you believe you missed out on when you were younger?
+278. What do you want more of in your life?
+279. What do you want less of in your life?
+280. Who depends on you?
+281. Who has had the greatest impact on your life?
+282. Are you happy with where you are in your life? Why?
+283. In one year from today, how do you think your life will be different?
+284. How have you sabotaged yourself in the past five years?
+285. Other than money, what else have you gained from your current job?
+286. Whom do you secretly envy? Why?
+287. In twenty years, what do you want to remember?
+288. What are you most excited about in your life right now – today?
+289. What experience from this past year do you appreciate the most?
+290. What is the most enjoyable thing your family has done together in the last three years?
+291. How many hours of television do you watch in a week? A month? A year?
+292. What is the biggest obstacle that stands in your way right now?
+293. What do you sometimes pretend you understand that you really don’t?
+294. What do you like most about your job? What do you dislike most about your job?
+295. What’s something new you recently learned about yourself?
+296. In one sentence, how would you describe your relationship with your mother?
+297. What was the most defining moment in your life during this past year?
+298. What’s the number one change you need to make in your life in the next twelve months?
+299. What makes you feel secure?
+300. What is your favorite sound?
+301. What are the top three qualities you look for in a friend?
+302. What simple gesture have you recently witnessed that renewed your hope in humanity?
+303. What is your favorite smell?
+304. What recent memory makes you smile the most?
+305. In one word, how would you describe your childhood?
+306. What celebrities do you admire? Why?
+307. What is the number one motivator in your life right now?
+308. What music do you listen to to lift your spirits when you’re feeling down?
+309. If I gave you $1000 and told you that you had to spend it today, what would you buy?
+310. What was the last thing that made you laugh out loud?
+311. What is your biggest pet peeve?
+312. Who was the last person you said “I love you” to?
+313. What is your biggest phobia?
+314. What are some recent compliments you’ve received?
+315. How many friends do you have in real life that you talk to regularly?
+316. How much money per month is enough for you to live comfortably?
+317. When was your first impression of someone totally wrong?
+318. How many hours a week do you spend online?
+319. What do you love to do?
+320. What specific character trait do you want to be known for?
+321. Are you more like your mom or your dad? In what way?
+322. What is the number one quality that makes someone a good leader?
+323. What bad habits do you want to break?
+324. What is your favorite place on Earth?
+325. What do you love to practice?
+326. What questions do you often ask yourself?
+327. What are you an expert at?
+328. How would an extra $1000 a month change your life?
+329. What things in life should always be free?
+330. What is your favorite time of the year?
+331. What is something you have always wanted since you were a kid?
+332. What is the most recent dream you remember having while sleeping?
+333. What confuses you?
+334. In what way are you your own worst enemy?
+335. When did you not speak up when you should have?
+336. What is your favorite quote?
+337. What is your favorite fictional story? (novel, movie, fairytale, etc.)
+338. Where or who do you turn to when you need good advice?
+339. What artistic medium do you use to express yourself?
+340. Who or what is the greatest enemy of mankind?
+341. What’s something you wish you had done earlier in life?
+342. What is the closest you have ever come to fearing for your life?
+343. How do you deal with isolation and loneliness?
+344. What do you know well enough to teach to others?
+345. What’s a quick decision you once made that changed your life?
+346. What have you lost interest in recently?
+347. What makes life easier?
+348. What was the last thing you furiously argued about with someone?
+349. What job would you never do no matter how much it paid?
+350. What is the number one solution to healing the world?
+351. What could society do without?
+352. What stresses you out?
+353. Now that it’s behind you, what did you do last week that was memorable?
+354. Where do you spend most of your time while you’re awake?
+355. What makes someone a hero?
+356. When in your life have you been a victim of stereotyping?
+357. When was the last time you felt lucky?
+358. When did you first realize that life is short?
+359. What is the most insensitive thing a person can do?
+360. What can someone do to grab your attention?
+361. What do you usually think about on your drive home from work?
+362. What’s one downside of the modern day world?
+363. What simple fact do you wish more people understood?
+364. If you could do it all over again, would you change anything?
+365. How would you describe your future in three words?</p><p id="a7b9d80c-6201-44bf-ab02-528ebbec7270" class="">
+</p></div></article></body></html>
